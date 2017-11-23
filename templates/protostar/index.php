@@ -144,7 +144,7 @@ else
 	<div class="body" id="top">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
-			<header class="header" role="banner">
+			<div class="header" role="banner">
 				<div class="header-inner clearfix">
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
 						<?php echo $logo; ?>
@@ -156,9 +156,9 @@ else
 						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>
 				</div>
-			</header>
+			</div>
 			<?php if ($this->countModules('position-1')) : ?>
-				<nav class="navigation" role="navigation">
+				<div class="navigation" role="navigation">
 					<div class="navbar pull-left">
 						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="element-invisible"><?php echo JTEXT::_('TPL_PROTOSTAR_TOGGLE_MENU'); ?></span>
@@ -170,7 +170,7 @@ else
 					<div class="nav-collapse">
 						<jdoc:include type="modules" name="position-1" style="none" />
 					</div>
-				</nav>
+				</div>
 			<?php endif; ?>
 			<jdoc:include type="modules" name="banner" style="xhtml" />
 			<div class="row-fluid">
@@ -183,7 +183,7 @@ else
 					</div>
 					<!-- End Sidebar -->
 				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
+				<div id="content" role="main" class="<?php echo $span; ?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
@@ -191,7 +191,7 @@ else
 					<div class="clearfix"></div>
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
-				</main>
+				</div>
 				<?php if ($position7ModuleCount) : ?>
 					<div id="aside" class="span3">
 						<!-- Begin Right Sidebar -->
@@ -203,7 +203,7 @@ else
 		</div>
 	</div>
 	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
+	<div class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
@@ -216,7 +216,7 @@ else
 				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
 			</p>
 		</div>
-	</footer>
+	</div>
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
