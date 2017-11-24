@@ -144,7 +144,7 @@ else
 	<div class="body" id="top">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<!-- Header -->
-			<header class="header" role="banner">
+			<header class="header">
 				<div class="header-inner clearfix">
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
 						<?php echo $logo; ?>
@@ -158,7 +158,7 @@ else
 				</div>
 			</header>
 			<?php if ($this->countModules('position-1')) : ?>
-				<nav class="navigation" role="navigation">
+				<nav class="navigation">
 					<div class="navbar pull-left">
 						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="element-invisible"><?php echo JTEXT::_('TPL_PROTOSTAR_TOGGLE_MENU'); ?></span>
@@ -183,7 +183,7 @@ else
 					</div>
 					<!-- End Sidebar -->
 				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
+				<main id="content" class="<?php echo $span; ?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
@@ -203,7 +203,7 @@ else
 		</div>
 	</div>
 	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
+	<footer class="footer">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
